@@ -29,6 +29,7 @@ const checkWin = () => {
             document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width="250px";
             document.querySelector(".line").style.width="20vw";
             document.querySelector(".line").style.transform = `translate(${e[3]}vw,${e[4]}vw) rotate(${e[5]}deg)`
+            music.play();
         }
     })
 }
@@ -60,4 +61,5 @@ reset.addEventListener('click',()=>{
     document.getElementsByClassName("info")[0].innerText = "Turn for "+turn;
     document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width="0px";
     document.querySelector(".line").style.width="0";
+    music.pause();
 })
